@@ -1,5 +1,4 @@
 alert ("Estoy conectado")
-
 /*
 //Ejercicios
 //Ejercicio 1
@@ -79,22 +78,21 @@ alert ("Estoy conectado")
 
 */
 
-/************************************************************************** */
 
-/* Ejercicios de práctica
-1- Evaluar una calificacion
+//Ejercicios de práctica
+/*1- Evaluar una calificacion
 -Solicitar una calificacion al usuario de 0 a 100
 -Evaluemos con un if si su calificacions es A, B, C, D, E, etc
--Mostremos con un switch su calificacion.
+-Mostremos con un switch su calificacion. 
 	
 Calificaciónes
 < 60  calificacion 'F'
 < 70 calificacion 'D'
 < 80 calificacion C
 < 90 calificacion B
-< 100 calificacion A */
+< 100 calificacion A 
 
-/*console.log("Elige alguna de las siguientes opciones")
+console.log("Elige alguna de las siguientes opciones")
 console.log("1.- Mi calificación esta entre 90 y 100")
 console.log("2.- Mi calificación esta entre 80 y 90")
 console.log("3.- Mi calificación esta entre 70 y 80")
@@ -122,24 +120,24 @@ switch (calificacion){
         console.log("Solo intriduce el porcentaje en un rango del 0 al 100");
         break;
 
-} */
-
+} 
+*/
 /*--------------------------------*/
 
 /* Ejercicios de práctica
 1- Evaluar una calificacion
 -Solicitar una calificacion al usuario de 0 a 100
 -Evaluemos con un if si su calificacions es A, B, C, D, E, etc
--Mostremos con un switch su calificacion.
+-Mostremos con un switch su calificacion. 
 	
 Calificaciónes
 < 60  calificacion 'F'
 < 70 calificacion 'D'
 < 80 calificacion C
 < 90 calificacion B
-< 100 calificacion A */
+< 100 calificacion A 
 
-/*const calificacion=Number(prompt("Introduce tu puntaje"))
+const calificacion=Number(prompt("Introduce tu puntaje"))
 console.log("La calificaciion introducida es: ", calificacion);
 
 function miCalificacion(calificacion){
@@ -182,16 +180,7 @@ switch (opcionCalificacion){
         break;
 
 }
-
-
-
-
-
-
-
-
-/*--------------------------------------------*/
-
+*/
 /*2- Casa de cambio
 
 Crear una funcion que obtenga  una cantidad de  dinero a traves de prompt(), tambien debe  pedirle el nombre de un pais , investigar su moneda y el tipo de cambio para hacer la conversion de  la cantidad capturada. ejemplo: 
@@ -207,35 +196,42 @@ Considerar minimo 4 tipo de monedas
 
 output:  '100 MXN equivale a 50 USD' */
 
-console.log("Estoy en méxico y viajaré a: elige una de las opciones:");
-console.log("1.- Estados Unidos");
-console.log("2.- Canada");
-console.log("3.- Brazil");
-console.log("4.- Venecia");
+let cantidadAcambiar=Number(prompt("¿Qué cantidad de dinero MXN vas a cambiar?"));
+console.log("Escribe a corder al siguiente menú el país al que vas a viajar");
+console.log("Estados Unidos");
+console.log("Canada");
+console.log("Brazil");
+console.log("Italia");
+paisViaje=prompt("El pais al que voy a viajar es:")
+
+let equivalencia=0;
+
+function cambio(pais, cantidad){
+    if(pais==="Estados Unidos"){
+        let equivalencia=cantidad*0.050
+        respuesta=`${equivalencia} dolares estadounidenses`
+    }else if(pais==="Canada"){
+        let equivalencia=cantidad*0.063
+        respuesta= `${equivalencia} dolares canadienses`
+    }else if(pais==="Brazil"){
+        let equivalencia=cantidad*0.23
+        respuesta= `${equivalencia} reales brasileños`
+    }else if(pais==="Italia"){
+        let equivalencia=cantidad*0.46
+        respuesta= `${equivalencia} euros`
+    }else{
+        console.log("Elige una opcion del menu")
+    }
+    return respuesta
+}
+cambio(paisViaje, cantidadAcambiar)
+
+resultado=cambio(paisViaje, cantidadAcambiar)
+console.log("El equivalente de su cantidad de ",cantidadAcambiar, "MXN en el pais de ", paisViaje, "es de" , respuesta)
+
 
 /*Equivalencia en pesos mexicanos*/
 /*1 peso=0.050 UDS
   1 peso = 0.063 dlres cadadienses
   1 peso=0.23 reales brazileños
-  1 peso = 0.46 euros*/
-
-const pais=prompt("Ingresa al país que te diriges acorde al menu")
-const opcion=pais;
-
-
-function cambio(opcion){
-    if (pais==="1"){
-        let suDinero=Number(prompt("Introduce la cantidad de dinero que llevaras"))
-        let equivalencia=suDinero*0.050
-        console.log=("La cantidad ingresada es:", suDinero, "mexicanos y el equivalente es: ", equivalencia, "dolares Estado Unidenses")
-    }else if (pais==="2"){
-        let suDinero=Number(prompt("Introduce la cantidad de dinero que llevaras"))
-        let equivalencia=suDinero*0.063
-        console.log=("La cantidad equivalente es:", equivalencia);
-    }else if (pais==="3"){ suDinero=Number(prompt("Introduce la cantidad de dinero que llevaras"))
-    equivalencia=suDinero*0.023
-    console.log=("La cantidad ingresada es:", suDinero, "mexicanos y el equivalente es: ", equivalencia, "reales Brazileños")
-    }
-}
-
-cambio(opcion);
+  1 peso = 0.46 euros */
