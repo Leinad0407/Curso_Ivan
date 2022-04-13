@@ -23,7 +23,7 @@ alert ("Conectado ando")
     let nombre =nombreCompleto;
 
     function vocalesEnTuNombre(){
-        let vocalO = nombre.match(/o/ig);
+    let vocalO = nombre.match(/o/ig);
     let vocalA = nombre.match(/a/gi);
     let vocalE = nombre.match(/e/gi);
     let vocalI = nombre.match(/i/gi);
